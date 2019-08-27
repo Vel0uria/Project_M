@@ -1,0 +1,4 @@
+# Project_M
+Propuesta de producción artística para la maestría en artes visuales de la UNAM.
+Lo que comenzó como una docena de tarjetas impresas creció a medida que más usuarios de Internet participaban contando sus relatos. De las iniciales 12 historias que formaban el proyecto, ahora suman un total de 40. Este crecimiento llevó a una transformación en la que fue necesario buscar una presentación distinta. El formato digital resultó ideal para que esta serie tuviera un alcance global y continuara  creciendo.  Fue así como se transformó en una colección virtual disponible en Internet en la cual los usuraios pueden comentar, discutir e incluso enviar sus propios relatos para que se continúen sumando a la colección. 
+A diferencia del proyecto impreso, que por su condición física está limitado a un número finito de historias, la colección virtual será ilimitada siempre y cuando los usuarios continúen sumando sus historias y discutiéndolas. 
