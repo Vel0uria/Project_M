@@ -6,8 +6,8 @@ function Home() {
   return (
     <div>
       <Layout>
-        <Header className="header" style={{ backgroundColor: "#f3dbb7" }}>
-          ¿¿¿Título???
+        <Header className="header" style={{ backgroundColor: "#cadce2" }}>
+          ENTELEQUIA
         </Header>
         <Content className="home" style={{ padding: "120px" }}>
           <img
@@ -25,17 +25,17 @@ function Home() {
           <Link to="/stories">
             <Button
               style={{
-                backgroundColor: "#b7c5e2",
-                fontFamily: "Julius Sans One"
+                backgroundColor: "#946f81",
+                fontFamily: "Lexend Deca"
               }}
             >
-              Ir a la colección
+              IR A LA COLECCIÓN
             </Button>
           </Link>
         </Content>
         <Footer
           className="footer"
-          style={{ width: "100%", height: 120, backgroundColor: "#d1c1a9" }}
+          style={{ width: "100%", height: 120, backgroundColor: "#cadce2" }}
         />
       </Layout>
     </div>

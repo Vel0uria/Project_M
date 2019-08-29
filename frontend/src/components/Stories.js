@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Card, Layout, List, Row, Col } from "antd";
+import { Link } from "react-router-dom";
+import { Card, List, Row, Col } from "antd";
 import axios from "axios";
 
 function Stories() {
   const [stories, setStory] = useState([]);
-  const { Header, Footer, Sider, Content } = Layout;
+
   useEffect(() => {
     axios
       .get("http://localhost:3000/stories")
@@ -21,14 +22,13 @@ function Stories() {
   return (
     <div>
       <h1>Title</h1>
-
       {stories.map(story => {
         return (
           <div key={story._id}>
             {!story ? (
               <p>Loading</p>
             ) : (
-              <div className="content">
+              <div>
                 <List
                   grid={{
                     column: 4,
@@ -38,24 +38,28 @@ function Stories() {
                     md: 4,
                     lg: 4,
                     xl: 6,
-                    xxl: 3
+                    xxl: 4
                   }}
+                  style={{ marginLeft: "5%" }}
                 >
                   <Col display="flex" justify="space-between">
                     <List.Item>
-                      <Card
-                        className="card"
-                        hoverable
-                        style={{
-                          width: 310,
-                          height: 310,
-                          backgroundColor: "#EFEEEE"
-                        }}
-                        // cover={}
-                      >
-                        <img alt="example" src={story.image} />
-                        <h2>{story.title}</h2>
-                      </Card>
+                      <Link to={`/stories/${story._id}`}>
+                        <Card
+                          title={story.title}
+                          className="card"
+                          size="small"
+                          hoverable
+                          style={{
+                            width: 310,
+                            height: 310
+                            // backgroundColor: "#b7c5e2"
+                          }}
+                        >
+                          <img alt="example" src={story.image} />
+                          {/* <h2>{story.title}</h2> */}
+                        </Card>
+                      </Link>
                     </List.Item>
                   </Col>
                 </List>
