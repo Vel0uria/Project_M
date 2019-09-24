@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Card, List, Row, Col } from "antd";
+import { Card, List, Row, Col, Layout } from "antd";
 import axios from "axios";
 
 function Stories() {
+  const { Content } = Layout;
   const [stories, setStory] = useState([]);
 
   useEffect(() => {
@@ -20,16 +21,17 @@ function Stories() {
   }, []);
 
   return (
-    <div>
-      <h1>Title</h1>
-      {stories.map(story => {
-        return (
-          <div key={story._id}>
-            {!story ? (
-              <p>Loading</p>
-            ) : (
-              <div>
+    <Layout style={{ backgroundColor: "#6a393f" }}>
+      <div className="cards" style={{ margin: "5%" }}>
+        {stories.map(story => {
+          return (
+            <div display="flex" justify="space-between" key={story._id}>
+              {!story ? (
+                <p>Loading</p>
+              ) : (
                 <List
+                  display="flex"
+                  justify="space-between"
                   grid={{
                     column: 4,
                     gutter: 16,
@@ -40,20 +42,24 @@ function Stories() {
                     xl: 6,
                     xxl: 4
                   }}
-                  style={{ marginLeft: "5%" }}
+                  style={{}}
                 >
-                  <Col display="flex" justify="space-between">
+                  <Col
+                  // display="flex"
+                  // justify="space-between"
+                  >
                     <List.Item>
                       <Link to={`/stories/${story._id}`}>
                         <Card
                           title={story.title}
                           className="card"
                           size="small"
-                          hoverable
+                          // hoverable
                           style={{
                             width: 310,
-                            height: 310
-                            // backgroundColor: "#b7c5e2"
+                            height: 310,
+                            backgroundColor: "#d9e6f2",
+                            borderColor: "#185e90"
                           }}
                         >
                           <img alt="example" src={story.image} />
@@ -63,12 +69,12 @@ function Stories() {
                     </List.Item>
                   </Col>
                 </List>
-              </div>
-            )}
-          </div>
-        );
-      })}
-    </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </Layout>
   );
 }
 

@@ -16,8 +16,12 @@ function Detail(props) {
       });
   }, [props.match.params.id]);
   return (
-    <div>
-      <h2>{story.title}</h2>
+    <div className="content" style={{ backgroundColor: "#dee9ed" }}>
+      <h2>
+        <b style={{ color: "#946f81" }}>{story.title}</b>
+      </h2>
+      <p>{story.description}</p>
+      <img alt="img" src={story.image} style={{ width: "600px" }} />
     </div>
   );
 }

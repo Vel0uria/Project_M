@@ -7,47 +7,81 @@ body {
   background-color: #c1d0d5;
 }
 
-.header {
+.menu {
+  font-size: 1.5rem;
+  height: 5vh;
   display: flex;
-
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 2rem;
+  text-decoration: none;
+  justify-content: space-around;
+  border-bottom-width: 3px;
   border-style: solid;
-  color: #775867;
+  border-top-color: #c1d0d5;
+  border-right-color: #c1d0d5;
+  border-left-color: #c1d0d5;
+  border-bottom-color: #183f6e;
+
+  /* background-color: #cadce2; */
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.header h1 {
+  margin: 2%;
+  margin-bottom: 4%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 4rem;
+  color: #183f6e;
+
+  /* 
+  
   border-bottom-width: 3px;
   border-top-color: #c1d0d5;
   border-right-color: #c1d0d5;
   border-left-color: #c1d0d5;
-  border-bottom-color: #775867;
+  border-bottom-color: #775867; */
 }
 
 .footer {
+  height: 1vh;
   border-style: solid;
   border-bottom-width: 3px;
   color: #775867;
-  border-top-color: #775867;
+  border-top-color: #183f6e;
   border-right-color: #d1c1a9;
   border-left-color: #d1c1a9;
   border-bottom-color: #d1c1a9;
 }
+
+.home button {
+  border-color: #183f6e;
+  color: #775867;
+}
+
 .home button:hover {
   border-style: solid;
+  border-color: rgba(148, 111, 129, 0.77);
+  border-width: 0.2rem;
 
-  border-color: #6e5c73;
+  /* border-color: #6e5c73; */
 }
 
 .home p {
-  background-color: rgba(222, 233, 237, 0.3);
+  background-color: rgb(236, 205, 106);
   border-radius: 1%;
+
+  color: #183f6e;
+  font-size: 2rem;
+  font-family: "Nunito", sans-serif;
 }
 
 .home {
   display: flex;
+  justify-content: space-evenly;
   text-align: center;
   flex-direction: column;
-  background-color: #5c94a6;
-  font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
+  /* background-color: #5c94a6; */
 }
 
 .home img {
@@ -58,16 +92,33 @@ body {
   border-radius: 100%;
   margin-bottom: 3%;
   border-style: solid;
-  border-color: #775867;
+  border-color: #183f6e;
+  /* border-color: #775867; */
 }
+.content {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5%;
+}
+
 .card {
   text-align: center;
   font-family: "Lexend Deca";
 }
 .card img {
-  /* display: flex;
-  justify-conent: end; */
   margin-top: 8%;
+  width: 50%;
+  height: 30%;
+}
+
+.card:hover {
+  border-width: 0.3rem;
+  border-color: #183f6e;
+}
+.content img {
   width: 50%;
   height: 50%;
 }

@@ -5,28 +5,37 @@ function Home() {
   const { Content, Header, Footer } = Layout;
   return (
     <div>
-      <Layout>
-        <Header className="header" style={{ backgroundColor: "#cadce2" }}>
-          ENTELEQUIA
+      <Layout style={{ backgroundColor: "rgba(206, 141,104,1)" }}>
+        <Header
+          className="header"
+          style={{ backgroundColor: "rgba(206, 141,104,1)" }}
+        >
+          <h1>ENTELEQUIAS</h1>
         </Header>
         <Content className="home" style={{ padding: "120px" }}>
           <img
             alt="gif"
-            src="https://media.giphy.com/media/hX0wSyZuL1pTzfc0Pz/giphy.gif"
+            src="https://media2.giphy.com/media/Pn63eMJSiTgsg/giphy.gif"
+            //https://benjaminlouche.files.wordpress.com/2014/11/mulholland-drive.gif
+            //https://media.giphy.com/media/hX0wSyZuL1pTzfc0Pz/giphy.gif
           />
-          <br />
+
           <p>
-            Esta es una colección de testimonios. Se trata de relatos que fueron
-            desacreditados como falsos por narrar apariciones y coincidencias
-            extraordinarias. Sin embargo, las fotografías que acompañan los
-            testimnios de esta colección, dan prueba de su absoluta veracidad.
+            "Magia en el escenario mientras cae la lluvia. Un público que no
+            distingue entre magia e ilusión y al que le daría igual que todas
+            las ilusiones fueran reales."
+            <br />
+            N. G.
           </p>
 
           <Link to="/stories">
             <Button
               style={{
-                backgroundColor: "#946f81",
-                fontFamily: "Lexend Deca"
+                backgroundColor: "#185e90",
+                fontFamily: "Lexend Deca",
+                color: "#775867"
+
+                // fontColor: "#442429"
               }}
             >
               IR A LA COLECCIÓN
