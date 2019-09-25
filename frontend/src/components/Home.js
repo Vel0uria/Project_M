@@ -5,10 +5,10 @@ function Home() {
   const { Content, Header, Footer } = Layout;
   return (
     <div>
-      <Layout style={{ backgroundColor: "rgba(206, 141,104,1)" }}>
+      <Layout style={{ backgroundColor: "#daaa0026" }}>
         <Header
           className="header"
-          style={{ backgroundColor: "rgba(206, 141,104,1)" }}
+          style={{ backgroundColor: "#9b2b1f00", borderColor: "red" }}
         >
           <h1>ENTELEQUIAS</h1>
         </Header>
@@ -30,12 +30,14 @@ function Home() {
 
           <Link to="/stories">
             <Button
+              className="button"
               style={{
                 backgroundColor: "#185e90",
                 fontFamily: "Lexend Deca",
-                color: "#775867"
 
-                // fontColor: "#442429"
+                // color: "#775867"
+
+                fontColor: "#442429"
               }}
             >
               IR A LA COLECCIÓN

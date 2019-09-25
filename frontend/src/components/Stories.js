@@ -21,7 +21,7 @@ function Stories() {
   }, []);
 
   return (
-    <Layout style={{ backgroundColor: "#6a393f" }}>
+    <Layout style={{ backgroundColor: "#f7e8bb" }}>
       <div className="cards" style={{ margin: "5%" }}>
         {stories.map(story => {
           return (
