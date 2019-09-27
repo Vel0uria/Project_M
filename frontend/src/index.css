@@ -26,7 +26,8 @@ body {
 }
 
 .header h1 {
-  margin-top: 5%;
+  margin-top: 3%;
+  margin-bottom: 2%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -48,20 +49,12 @@ body {
   border-bottom-color: #d1c1a9;
 }
 
-.home button {
-  border-color: #183f6e;
-  font-style: solid;
-
-  text-decoration: #daaa00;
-}
-.button {
-  text-decoration: #daaa00;
-}
 .home button:hover {
-  border-style: solid;
-  border-color: #daaa00;
-  border-width: 0.2rem;
-  background: linear-gradient(
+  border-style: dotted;
+  border-color: #185e90;
+  color: #daaa00;
+  border-width: 0.3rem;
+  /* background: linear-gradient(
     to left,
     rgb(243, 216, 118),
     #daaa00,
@@ -71,20 +64,20 @@ body {
     rgb(243, 216, 118),
     #be9500,
     rgb(243, 216, 118) 70%
-  );
-  text-decoration: #daaa00;
+  ); */
 
   /* border-color: #6e5c73; */
 }
 
 .home p {
   background-color: #175e901a;
-  /* border-style: dashed;
-  border-color: #daaa00; */
+  border-style: double;
+  border-color: #daab0036;
   /* color: #9b1c1f; */
   color: #185e90;
   font-size: 2rem;
   font-family: "Nunito", sans-serif;
+  padding: 1%;
 }
 
 .home {
@@ -101,7 +94,7 @@ body {
   width: 400px;
   height: 400px;
   border-radius: 100%;
-  margin: 5%;
+  margin: 2%;
   border-style: solid;
   /* border-color: #9b1c1f; */
   border-color: #185e90;
@@ -117,10 +110,22 @@ body {
   margin: 5%;
 }
 
+.content img {
+  width: 50%;
+  height: 50%;
+}
+
 .card {
   text-align: center;
   font-family: "Lexend Deca";
 }
+
+.card p {
+  font-size: 1.3rem;
+  color: #183f6e;
+  text-transform: uppercase;
+}
+
 .card img {
   margin-top: 8%;
   width: 50%;
@@ -129,9 +134,10 @@ body {
 
 .card:hover {
   border-width: 0.3rem;
-  border-color: #183f6e;
+  border-color: #daaa00;
 }
-.content img {
+.card img {
+  margin: 0%;
   width: 50%;
   height: 50%;
 }

@@ -21,7 +21,7 @@ function Detail(props) {
         <b style={{ color: "#946f81" }}>{story.title}</b>
       </h2>
       <p>{story.description}</p>
-      <img alt="img" src={story.image} style={{ width: "600px" }} />
+      <img alt="img" src={story.image} />
     </div>
   );
 }

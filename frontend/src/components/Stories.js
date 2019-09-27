@@ -21,7 +21,7 @@ function Stories() {
   }, []);
 
   return (
-    <Layout style={{ backgroundColor: "#f7e8bb" }}>
+    <Layout style={{ backgroundColor: "#daaa0026" }}>
       <div className="cards" style={{ margin: "5%" }}>
         {stories.map(story => {
           return (
@@ -51,7 +51,7 @@ function Stories() {
                     <List.Item>
                       <Link to={`/stories/${story._id}`}>
                         <Card
-                          title={story.title}
+                          // title={story.title}
                           className="card"
                           size="small"
                           // hoverable
@@ -59,11 +59,12 @@ function Stories() {
                             width: 310,
                             height: 310,
                             backgroundColor: "#d9e6f2",
-                            borderColor: "#185e90"
+                            // borderColor: "#185e90",
+                            fontSize: "0.9rem"
                           }}
                         >
+                          <p>{story.title}</p>
                           <img alt="example" src={story.image} />
-                          {/* <h2>{story.title}</h2> */}
                         </Card>
                       </Link>
                     </List.Item>

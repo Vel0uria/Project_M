@@ -6,10 +6,7 @@ function Home() {
   return (
     <div>
       <Layout style={{ backgroundColor: "#daaa0026" }}>
-        <Header
-          className="header"
-          style={{ backgroundColor: "#9b2b1f00", borderColor: "red" }}
-        >
+        <Header className="header" style={{ backgroundColor: "#9b2b1f00" }}>
           <h1>ENTELEQUIAS</h1>
         </Header>
         <Content className="home" style={{ padding: "120px" }}>
@@ -30,14 +27,14 @@ function Home() {
 
           <Link to="/stories">
             <Button
-              className="button"
               style={{
-                backgroundColor: "#185e90",
+                backgroundColor: "#daaa00",
                 fontFamily: "Lexend Deca",
-
+                fontSize: "0.9rem",
+                color: "#daaa0026"
                 // color: "#775867"
 
-                fontColor: "#442429"
+                // fontColor: "#442429"
               }}
             >
               IR A LA COLECCIÓN
