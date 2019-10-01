@@ -1,6 +1,6 @@
 const { model, Schema } = require("mongoose");
 
-const newStory = new Schema(
+const newStorySchema = new Schema(
   {
     ruta: {
       type: String,
@@ -10,4 +10,4 @@ const newStory = new Schema(
 
   { timestamps: false, versionKey: false }
 );
-module.exports = model("newStory", storySchema);
+module.exports = model("newStory", newStorySchema);

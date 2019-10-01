@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Detail from "./components/Detail";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
+import Newstory from "./components/newStory";
 function Router() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function Router() {
         <Route exact path="/" component={Home} />
         <Route exact path="/stories/:id" component={Detail} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/nueva" component={Newstory} />
       </Switch>
     </BrowserRouter>
   );
