@@ -5,30 +5,37 @@ function Home() {
   const { Content, Header, Footer } = Layout;
   return (
     <div>
-      <Layout style={{ backgroundColor: "#daaa0026" }}>
-        <Header className="header" style={{ backgroundColor: "#9b2b1f00" }}>
-          <h1>ENTELEQUIAS</h1>
-        </Header>
-        <Content className="home" style={{ padding: "120px" }}>
+      <Layout style={{ backgroundColor: "#f8f8f8" }}>
+        <Header
+          className="header"
+          style={{ backgroundColor: "#f8f8f8", height: "50vh" }}
+        >
           <img
+            className="backImg"
             alt="gif"
-            src="https://media2.giphy.com/media/Pn63eMJSiTgsg/giphy.gif"
+            src="https://thumbs.gfycat.com/WeeklyScornfulKillifish-size_restricted.gif"
+            //https://media.giphy.com/media/YnjxvrvonPCcDtdppt/giphy.gif
             //https://benjaminlouche.files.wordpress.com/2014/11/mulholland-drive.gif
-            //https://media.giphy.com/media/hX0wSyZuL1pTzfc0Pz/giphy.gif
+            //https://media.giphy.com/media/ANkISQyedbDG0/giphy.gif
           />
-
-          <p>
+          <img className="frontImg" alt="logo" src="../Logo.png" />
+          <h1>
+            <b>ENTELEQUIAS</b>
+          </h1>
+        </Header>
+        <Content className="home" style={{ height: "40vh" }}>
+          {/* <p>
             "Magia en el escenario mientras cae la lluvia. Un público que no
             distingue entre magia e ilusión y al que le daría igual que todas
             las ilusiones fueran reales."
             <br />
             N. G.
           </p>
-
+          */}
           <Link to="/stories">
             <Button
               style={{
-                backgroundColor: "#daaa00",
+                backgroundColor: "#262626",
                 fontFamily: "Lexend Deca",
                 fontSize: "0.9rem",
                 color: "#daaa0026"
@@ -41,10 +48,7 @@ function Home() {
             </Button>
           </Link>
         </Content>
-        <Footer
-          className="footer"
-          style={{ width: "100%", height: 120, backgroundColor: "#cadce2" }}
-        />
+        <Footer className="footer" style={{ backgroundColor: "#262626" }} />
       </Layout>
     </div>
   );

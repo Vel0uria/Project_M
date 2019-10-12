@@ -17,6 +17,7 @@ const storySchema = new Schema(
   },
   {
     timestamps: false,
+    //hora en la que se crea un nuevo modelo
     versionKey: false
   }
 );
