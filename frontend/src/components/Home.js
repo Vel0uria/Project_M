@@ -5,10 +5,10 @@ function Home() {
   const { Content, Header, Footer } = Layout;
   return (
     <div>
-      <Layout style={{ backgroundColor: "#f8f8f8" }}>
+      <Layout style={{ backgroundColor: "#dbd8d8" }}>
         <Header
           className="header"
-          style={{ backgroundColor: "#f8f8f8", height: "50vh" }}
+          style={{ backgroundColor: "#dbd8d8", height: "50vh" }}
         >
           <img
             className="backImg"
@@ -35,8 +35,8 @@ function Home() {
           <Link to="/stories">
             <Button
               style={{
-                backgroundColor: "#262626",
-                fontFamily: "Lexend Deca",
+                backgroundColor: "#b93730",
+                fontFamily: "News Cycle",
                 fontSize: "0.9rem",
                 color: "#daaa0026"
                 // color: "#775867"

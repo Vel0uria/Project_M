@@ -13,7 +13,6 @@ body {
   display: flex;
   text-decoration: none;
   justify-content: space-around;
-
   border-style: solid;
   border-top-color: #262626;
   border-right-color: #262626;
@@ -22,7 +21,7 @@ body {
   border-width: 0.3rem;
 
   /* background-color: #cadce2; */
-  font-family: "Lexend Deca", sans-serif;
+  font-family: "Quicksand";
 }
 
 .header h1 {
@@ -114,7 +113,7 @@ body {
   height: 50vh;
 }
 .content {
-  font-family: "Nunito", sans-serif;
+  font-family: "Cinzel", serif;
   font-size: 1.2rem;
   display: flex;
   flex-flow: row wrap;
@@ -122,9 +121,14 @@ body {
   margin: 5%;
 }
 
+.content p {
+  font-family: "nunito", sans-serif;
+  margin: 2%;
+}
+
 .content img {
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
 }
 
 .card {
@@ -134,7 +138,7 @@ body {
 
 .card p {
   font-size: 1.3rem;
-  color: #183f6e;
+  /* color: #183f6e; */
   text-transform: uppercase;
 }
 
@@ -146,7 +150,7 @@ body {
 
 .card:hover {
   border-width: 0.3rem;
-  border-color: #daaa00;
+  border-color: #b93730;
 }
 .card img {
   margin: 0%;

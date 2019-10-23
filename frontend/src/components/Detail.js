@@ -16,9 +16,9 @@ function Detail(props) {
       });
   }, [props.match.params.id]);
   return (
-    <div className="content" style={{ backgroundColor: "#dee9ed" }}>
+    <div className="content" style={{ backgroundColor: "#dbd8d8" }}>
       <h2>
-        <b style={{ color: "#946f81" }}>{story.title}</b>
+        <b style={{ color: "#b93730" }}>{story.title}</b>
       </h2>
       <p>{story.description}</p>
       <img alt="img" src={story.image} />
