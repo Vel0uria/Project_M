@@ -25,29 +25,25 @@ function Stories() {
       <div className="cards" style={{ margin: "5%" }}>
         {stories.map(story => {
           return (
-            <div display="flex" justify="space-between" key={story._id}>
+            <div key={story._id}>
               {!story ? (
                 <p>Loading</p>
               ) : (
                 <List
                   display="flex"
-                  justify="space-between"
+                  justify="space-evenly"
                   grid={{
-                    column: 4,
-                    gutter: 16,
-                    xs: 1,
-                    sm: 2,
-                    md: 4,
-                    lg: 4,
-                    xl: 6,
-                    xxl: 4
+                    column: 3,
+                    gutter: 15,
+                    // xs: 1,
+                    // sm: 2,
+                    // md: 4,
+                    // lg: 4,
+                    // xl: 6,
+                    // xxl: 4
                   }}
-                  style={{}}
                 >
-                  <Col
-                  // display="flex"
-                  // justify="space-between"
-                  >
+                  <Col>
                     <List.Item>
                       <Link to={`/stories/${story._id}`}>
                         <Card
@@ -56,11 +52,11 @@ function Stories() {
                           size="small"
                           // hoverable
                           style={{
-                            width: 310,
+                            width:310,
                             height: 310,
                             //backgroundColor: "#d9e6f2",
                             // borderColor: "#185e90",
-                            fontSize: "0.9rem"
+                            //fontSize: "0.9rem"
                           }}
                         >
                           <p>{story.title}</p>

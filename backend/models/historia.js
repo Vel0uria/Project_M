@@ -11,9 +11,11 @@ const storySchema = new Schema(
       required: true
     },
     image: {
-      type: String,
+      type: String, 
       required: true
+      
     }
+
   },
   {
     timestamps: false,

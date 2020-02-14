@@ -23,7 +23,7 @@ function Home() {
             <b>ENTELEQUIAS</b>
           </h1>
         </Header>
-        <Content className="home" style={{ height: "40vh" }}>
+        <Content className="home" style={{ height: "50vh" }}>
           {/* <p>
             "Magia en el escenario mientras cae la lluvia. Un público que no
             distingue entre magia e ilusión y al que le daría igual que todas
@@ -36,15 +36,14 @@ function Home() {
             <Button
               style={{
                 backgroundColor: "#b93730",
-                fontFamily: "News Cycle",
+                fontFamily: "Julius Sans One",
                 fontSize: "0.9rem",
-                color: "#daaa0026"
-                // color: "#775867"
-
-                // fontColor: "#442429"
+                color: "#daaa0026",
+                marginTop: "6vh"
+           
               }}
             >
-              IR A LA COLECCIÓN
+              <strong>IR A LA COLECCIÓN</strong>
             </Button>
           </Link>
         </Content>
