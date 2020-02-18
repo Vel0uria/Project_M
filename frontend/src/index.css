@@ -250,7 +250,6 @@ color:#e73b31 !important;
 
 .form input {
   max-width: 860px;
- 
 }
 
 .form button {
@@ -261,6 +260,9 @@ margin:10px;
 .form img{
   width:30vw;
   margin-left: 22% !important;
+}
+.form p {
+  color:red;
 }
 
 .description{

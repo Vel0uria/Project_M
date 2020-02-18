@@ -2,13 +2,13 @@ import React, { useEffect, useState,} from "react";
 import axios from "axios";
 import { Card, Layout, List, Col, Row, Form, Input, Button, Pagination } from "antd";
 import useForm from "../hooks/useForm";
-import { OmitProps } from "antd/lib/transfer/renderListBody";
-
+import Swal from "sweetalert2";
 
 function Newstory(props) {
   const [pics, setPics] = useState([]);
   const [pic, setPic] = useState({});
   const [show, showForm] = useState(false);
+  const [alert, showAlert] = useState(false);
   const [form, handleInputs] = useForm();
   const image = pic.ruta;
 
@@ -37,11 +37,17 @@ function Newstory(props) {
       });
   };
 
+  console.log(alert);
+  
+
   const createStory = () => {
     axios
       .post("http://localhost:3000/newstory", { ...form, image })
       .then(({ data }) => {
+        console.log(data);
         return data.title;
+        
+        
       })
       .catch(err => {
         console.log(err);
@@ -49,21 +55,48 @@ function Newstory(props) {
   };
 
   const deleteImage = id => {
-    id.preventDefault()
+    Swal.fire({
+      title: "¿Guardar historia?",
+      text: "No podrás hacer cambios después",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí", 
+      backdrop:`
+      rgba(0,0,123,0.4)
+      `,
+      showClass: {
+        popup: 'fadeInLeftBig'
+      },
+    }).then(res => {
+      console.log(res.value);
+      if (res.value) {
     axios
       .delete(`http://localhost:3000/pics/${id}`)
       .then(({ data }) => {
-        console.log(data);
+        createStory();
+        Swal.fire("¡Tu historia ha sido agregada a la colección!", data.msg, "success");
         props.history.push("/stories")
-    
       })
       .catch(err => {
         console.log(err);
       });
+    } else if (
+      res.dismiss === Swal.DismissReason.cancel
+    ) {
+      showForm(form)
+    } 
+    else {
+      return 
+    }
+  })
   };
 
- 
-
+const required = () => {
+  if (form.title === undefined || form.description === undefined){
+      showAlert(!alert)
+  }
+}
 
   return (
     <Layout>     
@@ -87,6 +120,10 @@ function Newstory(props) {
               />
             </Form.Item>
             <Form.Item>
+           {  alert &&
+            <p>Este campo es obligatorio</p>}
+            </Form.Item>
+            <Form.Item>
               <Input
                 className="description"
                 name="description"
@@ -96,11 +133,22 @@ function Newstory(props) {
               />
             </Form.Item>
             <Form.Item>
+              { alert &&
+                <p>Este campo es obligatorio</p>
+              }
+            </Form.Item>
+            <Form.Item>
               <Button onClick={() => showForm(!show)}>Elegir otra foto</Button>
             </Form.Item>
             <Button
               onClick={() => {
-                createStory();
+               if(form.title || form.description === undefined){
+                 showForm(form)
+                 showAlert(!alert)
+               }
+                else{showForm(!show)}
+                // createStory();
+
                 deleteImage(pic._id);
               }}
             className="saveBtn">
@@ -156,3 +204,6 @@ function Newstory(props) {
 }
 
 export default Newstory;
+
+
+
