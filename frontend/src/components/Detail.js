@@ -16,12 +16,14 @@ function Detail(props) {
       });
   }, [props.match.params.id]);
   return (
-    <div className="content" style={{ backgroundColor: "#dbd8d8" }}>
+    <div className="content" style={{ backgroundColor: "#f7f6f1" }}>
       <h2>
         <b style={{ color: "#b93730" }}>{story.title}</b>
       </h2>
-      <p>{story.description}</p>
+      <br/>
       <img alt="img" src={story.image} />
+      <p>{story.description}</p>
+      
     </div>
   );
 }

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,} from "react";
 import axios from "axios";
-import { Card, Layout, List, Col, Row, Form, Input, Button } from "antd";
+import { Card, Layout, List, Col, Row, Form, Input, Button, Pagination } from "antd";
 import useForm from "../hooks/useForm";
+import { OmitProps } from "antd/lib/transfer/renderListBody";
 
 
-function Newstory() {
+function Newstory(props) {
   const [pics, setPics] = useState([]);
   const [pic, setPic] = useState({});
-  // const [img, deleteImg] = useState({});
   const [show, showForm] = useState(false);
   const [form, handleInputs] = useForm();
   const image = pic.ruta;
@@ -54,16 +54,19 @@ function Newstory() {
       .delete(`http://localhost:3000/pics/${id}`)
       .then(({ data }) => {
         console.log(data);
-        // const img = data.picture
-        // deleteImg(img)
+        props.history.push("/stories")
+    
       })
       .catch(err => {
         console.log(err);
       });
   };
 
+ 
+
+
   return (
-    <Layout>
+    <Layout>     
       <div>
         {show &&
           <Form className="form">
@@ -71,6 +74,9 @@ function Newstory() {
               <Button onClick={() => showForm(!show)} className="close">
                 X
               </Button>
+            </Form.Item>
+            <Form.Item>
+              <img src={pic.ruta} alt="db_image" />
             </Form.Item>
             <Form.Item>
               <Input
@@ -90,33 +96,38 @@ function Newstory() {
               />
             </Form.Item>
             <Form.Item>
-              <img src={pic.ruta} alt="db_image" />
-              <Input type="text" name="image" placeholder={pic.ruta} />
-            </Form.Item>
-            <Form.Item>
-              <Button>Elegir otra foto</Button>
+              <Button onClick={() => showForm(!show)}>Elegir otra foto</Button>
             </Form.Item>
             <Button
               onClick={() => {
                 createStory();
                 deleteImage(pic._id);
               }}
-            >
+            className="saveBtn">
               Guardar
             </Button>
           </Form>}
+         
         {pics.map(pic => {
           return (
-            <div key={pic._id}>
+           
+            <div key={pic._id}>   
               <div className="cards">
+              
                 <List
                   className="list"
                   grid={{
                     column: 4,
                     gutter: 16
                   }}
+                  // pagination={{
+                  //   onChange: page => {
+                  //     console.log(page);
+                  //   },
+                  //   pageSize: 3,
+                  // }}
                 >
-                  <List.Item>
+                  <List.Item   >
                     <Card className="dbImages">
                       <img src={pic.ruta} alt="db_images" />
                       <Button
@@ -130,13 +141,18 @@ function Newstory() {
                     </Card>
                   </List.Item>
                 </List>
+                
               </div>
+              
             </div>
+      
           );
         })}
       </div>
+      
     </Layout>
   );
+  
 }
 
 export default Newstory;

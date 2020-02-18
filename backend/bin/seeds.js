@@ -5,7 +5,7 @@ require("dotenv").config();
 const pics = [
   {
     ruta:"https://res.cloudinary.com/dn1i6hdch/image/upload/v1565818516/album/M%D0%92xico002_rzvlfr.jpg"
-      ""
+      
   },
   {
     ruta:

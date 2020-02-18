@@ -21,7 +21,7 @@ function Stories() {
   }, []);
 
   return (
-    <Layout style={{ backgroundColor: "#dbd8d8" }}>
+    <Layout style={{ backgroundColor: "#e6e6e6" }}>
       <div className="cards" style={{ margin: "5%" }}>
         {stories.map(story => {
           return (
@@ -33,17 +33,10 @@ function Stories() {
                   display="flex"
                   justify="space-evenly"
                   grid={{
-                    column: 3,
-                    gutter: 15,
-                    // xs: 1,
-                    // sm: 2,
-                    // md: 4,
-                    // lg: 4,
-                    // xl: 6,
-                    // xxl: 4
+                    column: 4,
+                  
                   }}
                 >
-                  <Col>
                     <List.Item>
                       <Link to={`/stories/${story._id}`}>
                         <Card
@@ -52,8 +45,6 @@ function Stories() {
                           size="small"
                           // hoverable
                           style={{
-                            width:310,
-                            height: 310,
                             //backgroundColor: "#d9e6f2",
                             // borderColor: "#185e90",
                             //fontSize: "0.9rem"
@@ -64,7 +55,6 @@ function Stories() {
                         </Card>
                       </Link>
                     </List.Item>
-                  </Col>
                 </List>
               )}
             </div>
