@@ -7,11 +7,12 @@ import Swal from "sweetalert2";
 function Newstory(props) {
   const [pics, setPics] = useState([]);
   const [pic, setPic] = useState({});
+  const [info, saveInfo] = useState([]);
   const [show, showForm] = useState(false);
   const [alert, showAlert] = useState(false);
   const [form, handleInputs] = useForm();
   const image = pic.ruta;
-
+  const baseURL = "http://localhost:3000"
   useEffect(() => {
     axios
       .get("http://localhost:3000/pics")
@@ -23,12 +24,13 @@ function Newstory(props) {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [baseURL]);
 
   const getOnePic = id => {
     axios
       .get(`http://localhost:3000/pics/${id}`)
       .then(({ data }) => {
+        console.log(data);
         const pic = data.picture;
         setPic(pic);
       })
@@ -37,17 +39,17 @@ function Newstory(props) {
       });
   };
 
-  console.log(alert);
-  
 
   const createStory = () => {
     axios
       .post("http://localhost:3000/newstory", { ...form, image })
       .then(({ data }) => {
-        console.log(data);
-        return data.title;
-        
-        
+        localStorage.setItem("title", JSON.stringify(data.story.title))
+        localStorage.setItem("description", JSON.stringify(data.story.description))  
+        saveInfo(prevState=>{
+          return [...prevState, ...data.story]
+        })
+        console.log(localStorage);
       })
       .catch(err => {
         console.log(err);
@@ -66,7 +68,7 @@ function Newstory(props) {
       rgba(0,0,123,0.4)
       `,
       showClass: {
-        popup: 'fadeInLeftBig'
+        popup: 'fadeInLeft'
       },
     }).then(res => {
       console.log(res.value);
@@ -92,14 +94,10 @@ function Newstory(props) {
   })
   };
 
-const required = () => {
-  if (form.title === undefined || form.description === undefined){
-      showAlert(!alert)
-  }
-}
 
   return (
     <Layout>     
+      <h2 id="newStoryHeader">Elige la imagen que más se asimile <br/> a los personajes o lugares de tu historia</h2>
       <div>
         {show &&
           <Form className="form">
@@ -142,14 +140,13 @@ const required = () => {
             </Form.Item>
             <Button
               onClick={() => {
-               if(form.title || form.description === undefined){
-                 showForm(form)
+               if(form.title === undefined || form.description === undefined){
+                  showForm(form)
                  showAlert(!alert)
                }
-                else{showForm(!show)}
-                // createStory();
-
-                deleteImage(pic._id);
+                else{showForm(!show)
+                  deleteImage(pic._id);
+                }
               }}
             className="saveBtn">
               Guardar
@@ -177,14 +174,16 @@ const required = () => {
                 >
                   <List.Item   >
                     <Card className="dbImages">
-                      <img src={pic.ruta} alt="db_images" />
+                    <div style={{ backgroundImage: `url(${pic.ruta})`}}/>
                       <Button
+                      className="chooseBtn"
                         onClick={() => {
                           showForm(!show);
                           getOnePic(pic._id);
                         }}
                       >
-                        Elegir
+                        <p>+</p>
+                      
                       </Button>
                     </Card>
                   </List.Item>

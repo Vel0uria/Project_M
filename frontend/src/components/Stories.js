@@ -51,7 +51,7 @@ function Stories() {
                           }}
                         >
                           <p>{story.title}</p>
-                          <img alt="example" src={story.image} />
+                          <div className="cardImg" style={{ backgroundImage: `url(${story.image})`}}/>
                         </Card>
                       </Link>
                     </List.Item>
