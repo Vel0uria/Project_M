@@ -23,15 +23,14 @@ function Stories() {
   return (
     <Layout style={{ backgroundColor: "#e6e6e6" }}>
       <div className="cards" style={{ margin: "5%" }}>
-        {stories.map(story => {
+        {stories.reverse().map(story => {
           return (
             <div key={story._id}>
               {!story ? (
                 <p>Loading</p>
               ) : (
                 <List
-                  display="flex"
-                  justify="space-evenly"
+                id="collection"
                   grid={{
                     column: 4,
                   
@@ -50,8 +49,8 @@ function Stories() {
                             //fontSize: "0.9rem"
                           }}
                         >
-                          <p>{story.title}</p>
                           <div className="cardImg" style={{ backgroundImage: `url(${story.image})`}}/>
+                          <p>{story.title}</p>
                         </Card>
                       </Link>
                     </List.Item>

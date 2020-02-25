@@ -1,24 +1,30 @@
 import React from "react";
 import { Button, Layout } from "antd";
 import { Link } from "react-router-dom";
+import Animate from "animate.css-react";
 function Home() {
+  console.log(Animate);
+  
   const { Content, Header, Footer } = Layout;
   return (
     <div>
-      <Layout style={{ backgroundColor: "#dbd8d8" }}>
+      <Layout style={{ backgroundColor: "black" }}>
         <Header
           className="header"
-          style={{ backgroundColor: "#dbd8d8", height: "50vh" }}
+          style={{ backgroundColor: "black", height: "50vh" }}
         >
-          <img
-            className="backImg"
-            alt="gif"
-            src="https://thumbs.gfycat.com/WeeklyScornfulKillifish-size_restricted.gif"
-            //https://media.giphy.com/media/YnjxvrvonPCcDtdppt/giphy.gif
-            //https://benjaminlouche.files.wordpress.com/2014/11/mulholland-drive.gif
-            //https://media.giphy.com/media/ANkISQyedbDG0/giphy.gif
-          />
-          <img className="frontImg" alt="logo" src="../Logo.png" />
+          <div id="logo">
+            <Animate
+              // enter="fadeInRight"
+              // appear="fadeInRight"
+              durationAppear={5000}
+              durationEnter={1000}
+            >
+              <img className="logo" alt="logo" src="../prueba_web.png" />
+            </Animate>
+
+            <img className="logo" alt="logo" src="../prueba_web2.png" />
+          </div>
           <h1>
             <b>ENTELEQUIAS</b>
           </h1>
@@ -40,7 +46,6 @@ function Home() {
                 fontSize: "0.9rem",
                 color: "#daaa0026",
                 marginTop: "6vh"
-           
               }}
             >
               <strong>IR A LA COLECCIÓN</strong>

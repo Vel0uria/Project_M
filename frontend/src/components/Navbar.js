@@ -4,7 +4,8 @@ import { Menu, Layout } from "antd";
 
 function Navbar() {
   return (
-    <div className="menu" style={{ backgroundColor: "#262626" }}>
+    <div className="navGradient">
+      <div className="menu" style={{ backgroundColor: "#262626" }}>
       <NavLink className="navlink" to="/stories" style={{ color: "#6c6c6c" }}>
         Colección
       </NavLink>
@@ -15,6 +16,7 @@ function Navbar() {
       <NavLink className="navlink" to="/about" style={{ color: "#6c6c6c" }}>
         Acerca de
       </NavLink>
+      </div>
     </div>
   );
 }

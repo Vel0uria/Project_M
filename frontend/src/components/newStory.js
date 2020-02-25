@@ -4,6 +4,8 @@ import { Card, Layout, List, Col, Row, Form, Input, Button, Pagination } from "a
 import useForm from "../hooks/useForm";
 import Swal from "sweetalert2";
 
+
+
 function Newstory(props) {
   const [pics, setPics] = useState([]);
   const [pic, setPic] = useState({});
@@ -68,8 +70,11 @@ function Newstory(props) {
       rgba(0,0,123,0.4)
       `,
       showClass: {
-        popup: 'fadeInLeft'
+        popup: 'animated fadeInLeft'
       },
+      hideClass: {
+        popup: 'animated fadeOutUp'
+      }
     }).then(res => {
       console.log(res.value);
       if (res.value) {

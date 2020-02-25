@@ -13,29 +13,33 @@ body {
   display: flex;
   text-decoration: none;
   justify-content: space-around;
-  border-style: solid;
+  padding: 0.5rem;
+  /* border-style: solid;
   border-top-color: #262626;
   border-right-color: #262626;
   border-left-color: #262626;
-  border-bottom-color: #b93730;
-  border-width: 0.3rem;
+  border-width: 0.3rem; */
   font-family: "Julius Sans One";
 }
 
-.navlink:hover{
-
-color:#e73b31 !important;
-
+.navlink:hover {
+  color: #e73b31 !important;
 }
 
-#newStoryHeader{
+.navGradient {
+  /* border-bottom-color: linear-gradient(to right, red, purple); */
+  background: linear-gradient(to right, #da06c0, #13a260, #004f57, #6c1f85);
+  padding-bottom: 0.1rem;
+}
+
+#newStoryHeader {
   display: flex;
   justify-content: center;
   font-family: "Julius Sans One";
   font-size: xx-large;
   margin-top: 40px;
   text-align: center;
-  
+
   /* font-family: "Cinzel", serif; */
   /* font-family: "Nunito", sans-serif; */
 }
@@ -63,14 +67,13 @@ color:#e73b31 !important;
   border-bottom-color: #d1c1a9;
 }
 
-.home button{
- color: #262626 !important;
- font-size: larger !important;
- font-weight: bolder !important;
+.home button {
+  color: #262626 !important;
+  font-size: larger !important;
+  font-weight: bolder !important;
 }
 
 .home button:hover {
- 
   border-color: #262626;
   /* color: #daaa00; */
   /* border-width: 0.3rem; */
@@ -87,7 +90,6 @@ color:#e73b31 !important;
   ); */
 
   /* border-color: #6e5c73; */
-  
 }
 
 .home p {
@@ -109,36 +111,21 @@ color:#e73b31 !important;
   /* background-color: #5c94a6; */
 }
 
-.backImg {
+#logo {
   display: flex;
-  align-self: center;
-  position: absolute;
-  margin-left: 35%;
-  margin-top: 2%;
-  width: 25vw;
-  height: 45vh;
-  /* border-radius: 100%;
-  margin: 2%;
-  border-style: solid;
-
-  border-color: #185e90;
-  border-width: 0.3rem; */
+  justify-content: center;
 }
 
-.frontImg {
-  position: relative;
-  /* display: flex;
-  flex-flow: column wrap;
-  justify-content: center; */
-  margin-left: 35%;
-  width: 30vw;
-  height: 50vh;
+#logo img {
+  height: 55vh;
+  margin-top: 20px !important;
+  margin: -85px;
 }
 .content {
   font-family: "Cinzel", serif;
   font-size: 1.2rem;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 5%;
@@ -157,80 +144,72 @@ color:#e73b31 !important;
   justify-content: center !important;
 }
 
-.cards {
-  margin: 5%;
+#collection {
+  margin-top: -2%;
 }
 
 .card {
   text-align: center;
   font-family: "Julius Sans One";
   background-color: #f7f6f1 !important;
-  max-height:21vw;
-  max-width:21vw;
-  padding-bottom:4vh !important;
-
+  max-height: 21vw;
+  max-width: 20.4vw;
+  padding-bottom: 4vh !important;
 }
 
 .card p {
   font-size: 1rem;
   /* color: #183f6e; */
   text-transform: uppercase;
-  margin-top:14px;
-}
-
-.card img {
-  margin: 0%;
-  width:14vw !important;
-  height: auto !important;
-
+  /* margin-top:10px; */
 }
 
 .card:hover {
-  border-width: 0.3rem;
+  border-width: 0.2rem;
   border-color: #b93730;
 }
 
-
-
-.dbImages{
-  display: flex;
-  justify-content: center;
-  width:20vw;
-  height:20.5vw;
-  
+.cardImg {
+  margin: 16px;
+  width: 16vw;
+  height: 28vh;
+  background-size: cover;
 }
 
-.chooseBtn{
+.dbImages {
+  display: flex;
+  justify-content: center;
+  width: 20vw;
+  height: 20.5vw;
+}
 
+.chooseBtn {
   margin-top: 10px !important;
   border-radius: 50% !important;
   font-size: 1.4rem !important;
   font-weight: bolder !important;
-  height:40px !important;
-  width:40px !important;
-
+  height: 40px !important;
+  width: 40px !important;
 }
 
-.chooseBtn p{
+.chooseBtn p {
   text-align: center !important;
   margin-left: -3px !important;
- 
 }
 
-.dbImages button:hover{
-
+.dbImages button:hover {
   color: #b93730 !important;
   border-color: #b93730;
 }
 
 .dbImages div {
-margin-right:45px;
-width:200px;
-height: 200px;
-background-size: cover;
+  margin-right: 45px;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
 }
 
-.form{
+.form {
   position: fixed;
   overflow: auto;
   width: 70%;
@@ -241,36 +220,33 @@ background-size: cover;
   border-width: 1.5px;
   border-color: #323131;
   border-radius: 3px;
-  left: 10% !important; 
-  right:0; 
-  top:10px;
-  z-index: 9999 !important; 
-
+  left: 10% !important;
+  right: 0;
+  top: 10px;
+  z-index: 9999 !important;
 }
 
 .close {
   font-weight: bolder !important;
   font-size: larger !important;
-  color:#b93730 !important;
-  border:none !important;
+  color: #b93730 !important;
+  border: none !important;
   background-color: #f7f6f1 !important;
-
 }
 
 .close button:hover {
-
- width:50px;
- height: auto;
+  width: 50px;
+  height: auto;
 }
 
-.form button:hover{
-  border-color:#b93730 !important;
-  color:#b93730 !important;
+.form button:hover {
+  border-color: #b93730 !important;
+  color: #b93730 !important;
 }
 
-.form input:hover{
-  border-color:#b93730 !important;
-  color:#b93730 !important;
+.form input:hover {
+  border-color: #b93730 !important;
+  color: #b93730 !important;
 }
 
 .form input {
@@ -278,35 +254,23 @@ background-size: cover;
 }
 
 .form button {
-margin:10px;
-
+  margin: 10px;
 }
 
-.form img{
-  width:30vw;
+.form img {
+  width: 30vw;
   margin-left: 25% !important;
 }
 .form p {
-  color:red;
+  color: red;
 }
 
-.description{
-  
-  height: 150px !important; 
+.description {
+  height: 150px !important;
 }
 
-.saveBtn{
-  display:flex !important;
+.saveBtn {
+  display: flex !important;
   justify-content: center !important;
   margin-left: 42% !important;
 }
-
-.cardImg{
-margin-left: 35px;
-width:190px;
-height: 190px;
-background-size: cover;
-}
-
-
-
