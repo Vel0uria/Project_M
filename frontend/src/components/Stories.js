@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Card, List, Row, Col, Layout } from "antd";
+import { Card, List, Layout } from "antd";
 import axios from "axios";
 
 function Stories() {
