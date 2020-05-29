@@ -5,15 +5,15 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <div className="navGradient">
-      <div className="menu" style={{ backgroundColor: "#262626" }}>
-      <NavLink className="navlink" to="/stories" style={{ color: "#6c6c6c" }}>
+      <div className="menu" style={{ backgroundColor: "#1f191f" }}>
+      <NavLink className="navlink" to="/stories" style={{ color: "#a98316" }}>
         Colección
       </NavLink>
-      <NavLink className="navlink" to="/nueva" style={{ color: "#6c6c6c" }}>Agrega tu historia</NavLink>
-      <NavLink className="navlink" to="/" style={{ color: "#6c6c6c" }}>
+      <NavLink className="navlink" to="/nueva" style={{ color: "#a98316" }}>Agrega tu historia</NavLink>
+      <NavLink className="navlink" to="/" style={{ color: "#a98316" }}>
         Home
       </NavLink>
-      <NavLink className="navlink" to="/about" style={{ color: "#6c6c6c" }}>
+      <NavLink className="navlink" to="/about" style={{ color: "#a98316" }}>
         Acerca de
       </NavLink>
       </div>

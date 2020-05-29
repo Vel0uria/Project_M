@@ -21,8 +21,8 @@ function Stories() {
   }, []);
 
   return (
-    <Layout style={{ backgroundColor: "#e6e6e6" }}>
-      <div className="cards" style={{ margin: "5%" }}>
+    <Layout>
+      <div style={{ margin: "5%" }}>
         {stories.reverse().map(story => {
           return (
             <div key={story._id}>
@@ -42,12 +42,7 @@ function Stories() {
                           // title={story.title}
                           className="card"
                           size="small"
-                          // hoverable
-                          style={{
-                            //backgroundColor: "#d9e6f2",
-                            // borderColor: "#185e90",
-                            //fontSize: "0.9rem"
-                          }}
+                           hoverable
                         >
                           <div className="cardImg" style={{ backgroundImage: `url(${story.image})`}}/>
                           <p>{story.title}</p>
